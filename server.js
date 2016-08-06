@@ -1,6 +1,6 @@
 var express = require('express')
 var app = express()
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 4000
 
 app.use(function (req, res, next) {
   if (req.headers['x-forwarded-proto'] === 'https') {
@@ -13,5 +13,5 @@ app.use(function (req, res, next) {
 app.use(express.static('public'))
 
 app.listen(PORT, function () {
-  console.log('Express server is up on port 3000', PORT)
+  console.log('Express server is up on port 4000', PORT)
 })
