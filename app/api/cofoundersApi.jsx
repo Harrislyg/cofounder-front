@@ -26,7 +26,25 @@ module.exports = {
         window.alert('Login Failed')
       }
     })
-  }
+  },
+
+  signUp (formData) {
+  $.ajax({
+    type: 'POST',
+    url: serverURL + 'signup',
+    data: formData,
+    success: function (response) {
+      // then redirect
+      browserHistory.push('/signup')
+    },
+    error: function (xhr, ajaxOptions, thrownError) {
+      // else output error
+      console.log(xhr.status)
+      console.log(thrownError)
+      window.alert('Signup Failed')
+    }
+  })
+}
 
 
 

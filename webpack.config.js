@@ -24,6 +24,9 @@ module.exports = {
       Main: 'app/components/Main.jsx',
       Login: 'app/components/Login.jsx',
       About: 'app/components/About.jsx',
+      Signup: 'app/components/Signup.jsx',
+      Nav: 'app/components/Nav.jsx',
+
       cofoundersApi: 'app/api/cofoundersApi.jsx',
       applicationStyles: 'app/styles/challenge.css'
 
