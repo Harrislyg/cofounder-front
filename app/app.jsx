@@ -8,9 +8,9 @@ var About = require('About')
 
 
 
-// Load foundation
-require('style!css!foundation-sites/dist/foundation.min.css')
-$(document).foundation()
+// // Load foundation
+// require('style!css!foundation-sites/dist/foundation.min.css')
+// $(document).foundation()
 
 //App css
 require('style!css!applicationStyles')
@@ -20,6 +20,6 @@ ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={Main}>
       <IndexRoute component={Login}/>
-      <Route path="about" component={About}/>
+      <Route path="about" component={About} />
     </Route>
   </Router>, rootNode)

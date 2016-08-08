@@ -1,3 +1,6 @@
+var {browserHistory} = require('react-router')
+
+
 module.exports = {
 
   signin (loginData) {
@@ -11,12 +14,15 @@ module.exports = {
         window.localStorage.email = $('#user-email').val()
         window.localStorage.auth_token = response.auth_token
         // then redirect
-        window.location.href = '#about'
+        browserHistory.push('/about')
       },
       error: function (xhr, ajaxOptions, thrownError) {
         // else output error
         console.log(xhr.status)
         console.log(thrownError)
+        window.localStorage.removeItem('email')
+        window.localStorage.removeItem('auth_token')
+        window.localStorage.removeItem('name')
         window.alert('Login Failed')
       }
     })

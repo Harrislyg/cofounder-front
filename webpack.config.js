@@ -3,7 +3,7 @@ module.exports = {
   entry: [
     'script!jquery/dist/jquery.min.js',
     'script!foundation-sites/dist/foundation.min.js',
-    './app/app.jsx'
+    './app/components/main.jsx'
   ],
   externals: {
     jquery: 'jQuery'
@@ -29,6 +29,9 @@ module.exports = {
 
     },
     extensions: ['', '.js', 'jsx']
+  },
+  devServer: {
+    historyApiFallback: true
   },
   module: {
     loaders: [
