@@ -30,6 +30,7 @@ module.exports = {
       Biz: 'app/components/Biz.jsx',
       Profiles: 'app/components/Profiles.jsx',
       Profile: 'app/components/Profile.jsx',
+      User: 'app/components/User.jsx',
       cofoundersApi: 'app/api/cofoundersApi.jsx',
       applicationStyles: 'app/styles/challenge.css'
 

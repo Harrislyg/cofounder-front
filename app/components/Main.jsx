@@ -8,6 +8,8 @@ var About = require('About')
 var Nav = require('Nav')
 var Biz = require('Biz')
 var Profile = require('Profile')
+var User = require('User')
+
 
 
 require('style!css!applicationStyles')
@@ -51,6 +53,8 @@ var routes = (
       <Route path="signup" component={Signup}/>
       <Route path="biz" component={Biz}/>
       <Route path="profile" component={Profile}/>
+      <Route path="user" component={User} onEnter={authCheck}/>
+
 
     </Route>
   </Router>

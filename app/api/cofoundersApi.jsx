@@ -74,5 +74,22 @@ module.exports = {
       }).fail(function (jqXHR, textStatus, errorThrown) {
         console.log('error', errorThrown)
       })
+  },
+
+  getMyStats (callBack) {
+    $.ajax({
+      type: 'GET',
+      url: serverURL + 'user/profile',
+      beforeSend: function (xhr) {
+        xhr.setRequestHeader('Auth-Token', window.localStorage['auth_token'])
+        xhr.setRequestHeader('User-Email', window.localStorage['email'])
+
+      },
+      success: function (result) {
+        console.log('result', result)
+        callBack(null, result)
+      }
+    })
   }
+
 }

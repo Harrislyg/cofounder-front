@@ -67,8 +67,8 @@ class Nav extends React.Component {
                       <li>
                         <Link to="/signup">{this.state.signup}</Link>
                       </li>
-                      <li>
-
+                      <li style={{display: this.state.display}}>
+                        <Link to="/user">{window.localStorage.name}</Link>
                       </li>
 
                   </ul>
