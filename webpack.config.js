@@ -22,11 +22,14 @@ module.exports = {
     root: __dirname,
     alias: {
       Main: 'app/components/Main.jsx',
+      Home: 'app/components/Home.jsx',
       Login: 'app/components/Login.jsx',
       About: 'app/components/About.jsx',
       Signup: 'app/components/Signup.jsx',
       Nav: 'app/components/Nav.jsx',
-
+      Biz: 'app/components/Biz.jsx',
+      Profiles: 'app/components/Profiles.jsx',
+      Profile: 'app/components/Profile.jsx',
       cofoundersApi: 'app/api/cofoundersApi.jsx',
       applicationStyles: 'app/styles/challenge.css'
 

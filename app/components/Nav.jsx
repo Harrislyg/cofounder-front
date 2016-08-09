@@ -36,6 +36,8 @@ class Nav extends React.Component {
     window.localStorage.removeItem('email')
     window.localStorage.removeItem('auth_token')
     window.localStorage.removeItem('name')
+    window.localStorage.removeItem('username')
+
     this.setState({
       login: 'Log In',
       signup: 'Sign Up',
@@ -56,9 +58,11 @@ class Nav extends React.Component {
                     <div style={{display: this.state.display}}>
                       <button onClick={this.onLogout.bind(this)}>Logout</button>
                     </div>
-
                       <li>
-                        <Link to="/">{this.state.login}</Link>
+                        <Link to="/">Home</Link>
+                      </li>
+                      <li>
+                        <Link to="/login">{this.state.login}</Link>
                       </li>
                       <li>
                         <Link to="/signup">{this.state.signup}</Link>

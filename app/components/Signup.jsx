@@ -13,11 +13,11 @@ class Signup extends React.Component {
   }
   render () {
     return (
-      <form id="signUpForm" method="post">
-      <p><input id="name" type="text" name="name" value="" placeholder="Name"/></p>
-      <p><input id="user-email" type="text" name="email" value="" placeholder="Email"/></p>
-      <p><input type="password" name="password" value="" placeholder="Password"/></p>
-      <p className="submit"><input type="submit" name="commit" value="Login"/></p>
+      <form id="signUpForm" onSubmit={this.onsignUp.bind(this)}>
+      <p><input id="name" type="text" name="name" placeholder="Name"/></p>
+      <p><input id="user-email" type="text" name="email" placeholder="Email"/></p>
+      <p><input type="password" name="password" placeholder="Password"/></p>
+      <p className="submit"><input type="submit" name="commit" value="Sign Up"/></p>
       </form>
 
     )
