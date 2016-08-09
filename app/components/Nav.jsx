@@ -1,12 +1,14 @@
 var React = require('react')
 var {Link, IndexLink} = require('react-router')
+var {browserHistory} = require('react-router')
 
 class Nav extends React.Component {
   constructor () {
     super()
     this.state = {
       login: 'Log In',
-      signup: 'Sign Up'
+      signup: 'Sign Up',
+      display: 'none'
 
     }
   }
@@ -15,9 +17,32 @@ class Nav extends React.Component {
     if(window.localStorage.getItem('auth_token')) {
       this.setState({
         login: '',
-        signup: ''
+        signup: '',
+        display: 'block'
       })
     }
+  }
+  componentWillReceiveProps () {
+    if(window.localStorage.getItem('auth_token')) {
+      this.setState({
+        login: '',
+        signup: '',
+        display: 'block'
+      })
+    }
+  }
+  onLogout (e) {
+    e.preventDefault()
+    window.localStorage.removeItem('email')
+    window.localStorage.removeItem('auth_token')
+    window.localStorage.removeItem('name')
+    this.setState({
+      login: 'Log In',
+      signup: 'Sign Up',
+      display: 'none'
+    })
+    browserHistory.push('/')
+
   }
   render () {
 
@@ -28,11 +53,18 @@ class Nav extends React.Component {
               <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul className="nav navbar-nav navbar-right">
 
+                    <div style={{display: this.state.display}}>
+                      <button onClick={this.onLogout.bind(this)}>Logout</button>
+                    </div>
+
                       <li>
                         <Link to="/">{this.state.login}</Link>
                       </li>
                       <li>
                         <Link to="/signup">{this.state.signup}</Link>
+                      </li>
+                      <li>
+
                       </li>
 
                   </ul>
