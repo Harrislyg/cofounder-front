@@ -2,13 +2,16 @@ var React = require('react')
 var {Link, IndexLink} = require('react-router')
 var {browserHistory} = require('react-router')
 import RaisedButton from 'material-ui/RaisedButton'
+import {Tabs, Tab} from 'material-ui/Tabs'
+import Slider from 'material-ui/Slider'
+
 
 class Nav extends React.Component {
   constructor () {
     super()
     this.state = {
-      login: 'Log In',
-      signup: 'Sign Up',
+      login: 'LOGIN',
+      signup: 'SIGNUP',
       display: 'none'
 
     }
@@ -40,8 +43,8 @@ class Nav extends React.Component {
     window.localStorage.removeItem('username')
 
     this.setState({
-      login: 'Log In',
-      signup: 'Sign Up',
+      login: 'LOGIN',
+      signup: 'SIGNUP',
       display: 'none'
     })
     browserHistory.push('/')
@@ -50,32 +53,29 @@ class Nav extends React.Component {
   render () {
 
     return (
-      <nav id="mainNav" className="navbar navbar-default navbar-fixed-top navbar-custom">
-          <div className="container">
+      <nav id="navBar" className="navbar navbar-default navbar-custom">
+  <div className="container-fluid">
+    <div className="navbar-header">
+      <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span className="sr-only">Toggle navigation</span>
+        <span className="icon-bar"></span>
+        <span className="icon-bar"></span>
+        <span className="icon-bar"></span>
+      </button>
+      <a className="navbar-brand navbar-font" href="/">TEAMO</a>
+    </div>
 
-              <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                  <ul className="nav navbar-nav navbar-right">
+    <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-                    <div style={{display: this.state.display}}>
-                      <RaisedButton onClick={this.onLogout.bind(this)} label="Logout" />
-                    </div>
-                      <li>
-                        <Link to="/">Home</Link>
-                      </li>
-                      <li>
-                        <Link to="/login">{this.state.login}</Link>
-                      </li>
-                      <li>
-                        <Link to="/signup">{this.state.signup}</Link>
-                      </li>
-                      <li style={{display: this.state.display}}>
-                        <Link to="/user">{window.localStorage.name}</Link>
-                      </li>
-
-                  </ul>
-              </div>
-          </div>
-      </nav>
+      <ul className="nav navbar-nav navbar-right">
+        <li><Link className="navbar-font" to="/login">{this.state.login}</Link></li>
+        <li><Link className="navbar-font" to="/signup">{this.state.signup}</Link></li>
+        <li style={{display: this.state.display}}><Link className="navbar-font" to="/user">{window.localStorage.name}</Link></li>
+        <li onClick={this.onLogout.bind(this)} style={{display: this.state.display}}><Link className="navbar-font" to="#">Logout</Link></li>
+      </ul>
+    </div>
+  </div>
+</nav>
     )
   }
 }

@@ -55,6 +55,33 @@ module.exports = {
         console.log('error', errorThrown)
       })
   },
+  getAllDev (callBack) {
+    $.get(serverURL + 'users/expertise/developer')
+      .done(function (data) {
+        callBack(null, data)
+        console.log(data)
+      }).fail(function (jqXHR, textStatus, errorThrown) {
+        console.log('error', errorThrown)
+      })
+  },
+  getAllEngineer (callBack) {
+    $.get(serverURL + 'users/expertise/engineer')
+      .done(function (data) {
+        callBack(null, data)
+        console.log(data)
+      }).fail(function (jqXHR, textStatus, errorThrown) {
+        console.log('error', errorThrown)
+      })
+  },
+  getAllDesigner (callBack) {
+    $.get(serverURL + 'users/expertise/designer')
+      .done(function (data) {
+        callBack(null, data)
+        console.log(data)
+      }).fail(function (jqXHR, textStatus, errorThrown) {
+        console.log('error', errorThrown)
+      })
+  },
 
   getUserProfile (userId) {
     $.get(serverURL + 'users/' + userId)

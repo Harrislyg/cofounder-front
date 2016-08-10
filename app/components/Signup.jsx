@@ -13,12 +13,28 @@ class Signup extends React.Component {
   }
   render () {
     return (
-      <form id="signUpForm" onSubmit={this.onsignUp.bind(this)}>
-      <p><input id="name" type="text" name="name" placeholder="Name"/></p>
-      <p><input id="user-email" type="text" name="email" placeholder="Email"/></p>
-      <p><input type="password" name="password" placeholder="Password"/></p>
-      <p className="submit"><input type="submit" name="commit" value="Sign Up"/></p>
+      <div>
+        <div className="mui-container">
+            <div className="mui-panel">
+        <form id="signUpForm" onSubmit={this.onsignUp.bind(this)}>
+        <legend>Sign Up</legend>
+          <div className="mui-textfield">
+            <input id="name" type="text" name="name" required/>
+            <label>Name</label>
+          </div>
+        <div className="mui-textfield">
+          <input id="user-email" type="text" name="email" required/>
+          <label>Email</label>
+        </div>
+        <div className="mui-textfield">
+          <input type="password" name="password" required/>
+          <label>Password</label>
+        </div>
+        <button type="submit" className="mui-btn mui-btn--raised">Sign Up</button>
       </form>
+      </div>
+          </div>
+      </div>
 
     )
   }

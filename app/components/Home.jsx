@@ -6,14 +6,23 @@ class Home extends React.Component {
   render () {
     return (
       <div>
-        <div>Kick Ass Banner</div>
+        <div id="panel-image"></div>
         <div>
-          <Link to="/biz" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Hustlers</Link>
-          <div>Software Developers</div>
-          <div>Engineers</div>
-          <div>Designers</div>
+          <div id="home-top" className="mui--text-dark-secondary mui--text-display1 home-header">Connect with people</div>
+            <div className="mui--text-dark-secondary mui--text-subhead home-header">Build an extraordinary team</div>
+        </div>
+        <div className="home-div mui-container-fluid">
+            <div className="mui-row">
+              <Link className="home-links" to="/biz"  activeStyle={{fontWeight: 'bold'}}><div id="home-one" className="mui-col-md-6 mui-link mui-panel">Hustlers</div></Link>
+              <Link className="home-links" to="/dev"  activeStyle={{fontWeight: 'bold'}}><div id="home-two" className="mui-col-md-6 mui-link mui-panel">Developers</div></Link>
+            </div>
+            <div className="mui-row">
+              <Link className="home-links" to="/engineer"  activeStyle={{fontWeight: 'bold'}}><div id="home-three" className="mui-col-md-6 mui-link mui-panel">Engineers</div></Link>
+              <Link className="home-links" to="/designer"  activeStyle={{fontWeight: 'bold'}}><div id="home-four" className="mui-col-md-6 mui-link mui-panel">Designers</div></Link>
+            </div>
         </div>
       </div>
+
 
     )
   }

@@ -14,11 +14,24 @@ class Login extends React.Component {
   }
   render () {
     return (
-        <form id="logInForm" onSubmit={this.onLogIn.bind(this)}>
-          <input id="user-email" ref="email" type="text" name="email"  placeholder="Email"/>
-          <input type="password" ref="password" name="password"  placeholder="Password"/>
-          <input type="submit" name="commit" value="Login"/>
-        </form>
+      <div>
+<div className="mui-container">
+    <div className="mui-panel">
+<form id="logInForm" onSubmit={this.onLogIn.bind(this)}>
+<legend>Login</legend>
+<div className="mui-textfield">
+  <input id="user-email" type="text" name="email" required/>
+  <label>Email</label>
+</div>
+<div className="mui-textfield">
+  <input type="password" name="password" required/>
+  <label>Password</label>
+</div>
+<button type="submit" className="mui-btn mui-btn--raised">Login</button>
+</form>
+</div>
+  </div>
+</div>
 
     )
   }

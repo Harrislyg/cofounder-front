@@ -16,6 +16,9 @@ var Signup = require('Signup')
 var About = require('About')
 var Nav = require('Nav')
 var Biz = require('Biz')
+var Dev = require('Dev')
+var Engineer = require('Engineer')
+var Designer = require('Designer')
 var Profile = require('Profile')
 var User = require('User')
 var Edituser = require('Edituser')
@@ -43,7 +46,6 @@ class Main extends React.Component {
         <div >
           <Nav />
           <div>
-            <p>Main.jsx Rendered</p>
             {this.props.children}
           </div>
         </div>
@@ -66,6 +68,9 @@ var routes = (
       <Route path="about" component={About} onEnter={authCheck}/>
       <Route path="signup" component={Signup}/>
       <Route path="biz" component={Biz}/>
+      <Route path="dev" component={Dev}/>
+      <Route path="engineer" component={Engineer}/>
+      <Route path="designer" component={Designer}/>
       <Route path="profile" component={Profile}/>
       <Route path="user" component={User} onEnter={authCheck}/>
       <Route path="Edituser" component={Edituser} onEnter={authCheck}/>

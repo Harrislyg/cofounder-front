@@ -1,0 +1,116 @@
+body {
+    font-family: 'Roboto',sans-serif !important;
+    background-color: #EDEFED !important;
+  }
+#navBar {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+}
+.mui-link {
+  text-align: center;
+}
+.navbar-custom {
+  color: #fff !important;
+  background: #00BCD4 !important;
+}
+
+.navbar-font {
+  text-shadow: unset !important;
+  font-family: BlinkMacSystemFont;
+  color: #fff !important;
+}
+
+.navbar-nav>li>a {
+  text-shadow: unset !important;
+
+}
+
+.icon-bar {
+  background: #fff !important;
+
+}
+
+.home-header {
+  color: #484848 !important;
+  text-align: center;
+}
+
+#home-top {
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.home-div {
+  padding-top: 20px;
+  width: 70%;
+  margin: 0 auto;
+
+}
+
+#home-one {
+  height: 200px;
+  width: 47%;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-image: url('https://cdn2.hubspot.net/hub/235279/hubfs/images/business-data-supply.jpg?t=1470744397032&width=960&height=540');
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+#home-two {
+  height: 200px;
+  width: 47%;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  background-image: url('http://picknotebook.com/blog/wp-content/uploads/2015/11/best-laptop-for-programming.jpg');
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+#home-three {
+  height: 200px;
+  width: 47%;
+  margin-right: 10px;
+  margin-top: 10px;
+  background-image: url('http://eee.hku.edu.tr/Dosyalar/18062015155232-img_index.jpg');
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+#home-four {
+  height: 200px;
+  width: 47%;
+  margin-left: 10px;
+  margin-top: 10px;
+  background-image: url('https://i.ytimg.com/vi/3n4to_eF5NU/maxresdefault.jpg');
+  background-repeat:no-repeat;
+  background-size:cover;
+}
+
+.home-links {
+  text-decoration: none;
+  font-size: 2.3em;
+  color: #fff;
+  text-align: center;
+  line-height: 200px;
+  font-weight: 500;
+}
+
+.home-links:hover {
+  text-decoration: none;
+  font-size: 2.3em;
+  color: #fff;
+  text-align: center;
+  line-height: 200px;
+  font-weight: 500;
+}
+
+
+#panel-image {
+  margin: 0;
+  width: 100%;
+  height: 300px;
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-image: url('http://i.huffpost.com/gen/1645650/images/o-STARTUP-facebook.jpg');
+  background-position-y: -25px;
+
+}
