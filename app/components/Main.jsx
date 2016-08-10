@@ -1,5 +1,14 @@
 var React = require('react')
 var ReactDOM = require('react-dom')
+import injectTapEventPlugin from 'react-tap-event-plugin'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
+import getMuiTheme from 'material-ui/styles/getMuiTheme'
+import lightBaseTheme from 'material-ui/styles/baseThemes/lightBaseTheme'
+
+
+const lightMuiTheme = getMuiTheme(lightBaseTheme)
+// Needed for onTouchTap
+// http://stackoverflow.com/a/34015469/988941
 var {Route, Link, IndexLink, Router, IndexRoute, browserHistory, hashHistory} = require('react-router')
 var Home = require('Home')
 var Login = require('Login')
@@ -9,8 +18,10 @@ var Nav = require('Nav')
 var Biz = require('Biz')
 var Profile = require('Profile')
 var User = require('User')
+var Edituser = require('Edituser')
 
 
+injectTapEventPlugin()
 
 require('style!css!applicationStyles')
 
@@ -27,6 +38,7 @@ class Main extends React.Component {
 
   render () {
     return (
+      <MuiThemeProvider muiTheme={lightMuiTheme}>
       <div>
         <div >
           <Nav />
@@ -36,6 +48,8 @@ class Main extends React.Component {
           </div>
         </div>
       </div>
+    </MuiThemeProvider>
+
     )
   }
 }
@@ -54,7 +68,7 @@ var routes = (
       <Route path="biz" component={Biz}/>
       <Route path="profile" component={Profile}/>
       <Route path="user" component={User} onEnter={authCheck}/>
-
+      <Route path="Edituser" component={Edituser} onEnter={authCheck}/>
 
     </Route>
   </Router>

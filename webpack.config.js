@@ -31,6 +31,7 @@ module.exports = {
       Profiles: 'app/components/Profiles.jsx',
       Profile: 'app/components/Profile.jsx',
       User: 'app/components/User.jsx',
+      Edituser: 'app/components/Edituser.jsx',
       cofoundersApi: 'app/api/cofoundersApi.jsx',
       applicationStyles: 'app/styles/challenge.css'
 

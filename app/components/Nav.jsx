@@ -1,6 +1,7 @@
 var React = require('react')
 var {Link, IndexLink} = require('react-router')
 var {browserHistory} = require('react-router')
+import RaisedButton from 'material-ui/RaisedButton'
 
 class Nav extends React.Component {
   constructor () {
@@ -56,7 +57,7 @@ class Nav extends React.Component {
                   <ul className="nav navbar-nav navbar-right">
 
                     <div style={{display: this.state.display}}>
-                      <button onClick={this.onLogout.bind(this)}>Logout</button>
+                      <RaisedButton onClick={this.onLogout.bind(this)} label="Logout" />
                     </div>
                       <li>
                         <Link to="/">Home</Link>

@@ -90,6 +90,31 @@ module.exports = {
         callBack(null, result)
       }
     })
+  },
+
+  editMyStats (formData) {
+    $.ajax({
+      type: 'PUT',
+      url: serverURL + 'user/profile',
+      data: formData,
+      beforeSend: function (xhr) {
+        xhr.setRequestHeader('Auth-Token', window.localStorage['auth_token'])
+        xhr.setRequestHeader('User-Email', window.localStorage['email'])
+      },
+      success: function (result) {
+        console.log('result', result)
+        window.localStorage.name = result.name
+        window.localStorage.email = result.email
+        window.localStorage.auth_token = result.auth_token
+        browserHistory.push('/User')
+      },
+      error: function (xhr, ajaxOptions, thrownError) {
+       // else output error
+       console.log(xhr.status)
+       console.log(thrownError)
+       window.alert('Profile failed to edit')
+     }
+    })
   }
 
 }
