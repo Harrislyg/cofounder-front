@@ -44,18 +44,52 @@ class Profile extends React.Component {
 
   render () {
     return (
-      <div>
-        <p>{this.state.name}</p>
-        <p>{this.state.email}</p>
-        <p>{this.state.expertise}</p>
-        <p>{this.state.workexp}</p>
-        <p>{this.state.skills}</p>
-        <p>{this.state.education}</p>
-        <p>{this.state.age}</p>
-        <p>{this.state.location}</p>
-        <p>{this.state.partnerexpertise}</p>
-        <p>{this.state.partnerworkexp}</p>
-        <p>{this.state.partnerskills}</p>
+      <div className="grid-gap2">
+        <div className="mui-panel">
+          <div className="profpic"></div>
+            <div className="floaton">
+            <div  id="profiles-name">{this.state.name}</div>
+            <div id="profiles-expertise" className="profiles-btm">{this.state.expertise}</div>
+            <div className="iconscontainer profiles-btm">
+                <span id="profiles-btm" className="glyphicon glyphicon-map-marker"></span>
+            <div id="location" className="profiles-btm"> {this.state.location}</div><br/>
+            </div>
+          <div className="iconscontainer">
+            <a href="www.facebook.com"><i className="fa fa-facebook-square fa-lg" aria-hidden="true"></i></a>
+            <a href="www.twitter.com"><i className="fa fa-twitter-square fa-lg" aria-hidden="true"></i></a>
+            <a href="www.linkedin.com"><i className="fa fa-linkedin-square fa-lg" aria-hidden="true"></i></a>
+          </div>
+          </div>
+        </div>
+
+        <div className="mui-panel" id="muipanel">
+          <div>
+            <div className="smallpanel">
+            <p id="marginlefttop" className="whitefont">BACKGROUND</p>
+            </div>
+        </div><br/>
+            <p id="marginleft" className="strong">Work Experience</p>
+            <p id="marginleft">{this.state.workexp}</p><br/>
+            <p id="marginleft" className="strong">Skills</p>
+            <p id="marginleft">{this.state.skills}</p><br/>
+            <p id="marginleft" className="strong">Education</p>
+            <p id="marginleft">{this.state.education}</p><br/>
+            </div>
+
+            <div className="mui-panel" id="muipanel">
+              <div>
+                <div className="smallpanel">
+                <p id="marginlefttop" className="whitefont">{this.state.name.toUpperCase()} IS LOOKING FOR A FOUNDER WHO</p>
+                </div><br/>
+              <p id="marginleft" className="strong">Has Expertise In</p>
+                <p id="marginleft">{this.state.partnerexpertise}</p><br/>
+                <p id="marginleft" className="strong">Work Industry</p>
+                <p id="marginleft">{this.state.partnerworkexp}</p><br/>
+                <p id="marginleft" className="strong">Skills</p>
+                <p id="marginleft">{this.state.partnerskills}</p>
+                </div>
+                <br/>
+            </div>
       </div>
 
     )

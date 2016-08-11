@@ -99,7 +99,7 @@ class userData extends React.Component {
                 <br/>
             </div>
             <div>
-            <button className="mui-btn mui-btn--raised mui-btn--primary"><Link id="editUserLink" to="/Edituser">Edit</Link></button>
+            <Link id="editUserLink" to="/Edituser"><button className="mui-btn mui-btn--raised mui-btn--primary">Edit</button></Link>
             </div>
 
         </div>

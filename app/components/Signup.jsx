@@ -37,9 +37,10 @@ class Signup extends React.Component {
     const xhr = new XMLHttpRequest();
     xhr.open('GET', `/sign-s3?file-name=${file.name}&file-type=${file.type}`);
     xhr.onreadystatechange = () => {
+      console.log('One: ', xhr.responseText)
       if(xhr.readyState === 4){
         if(xhr.status === 200){
-          console.log(xhr.responseText)
+          console.log('Two: ', xhr.responseText)
           const response = JSON.parse(xhr.responseText);
           this.uploadFile(file, response.signedRequest, response.url);
         }

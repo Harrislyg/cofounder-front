@@ -13,12 +13,21 @@ body {
 .navbar-custom {
   color: #fff !important;
   background: #00BCD4 !important;
+
 }
 
 .navbar-font {
   text-shadow: unset !important;
   font-family: BlinkMacSystemFont;
   color: #fff !important;
+
+}
+
+#logo {
+  font-size: 1.6em !important;
+  font-weight: 600 !important;
+  border: 1px solid #fff !important;
+  margin: 5px;
 }
 
 .navbar-nav>li>a {
@@ -160,6 +169,10 @@ body {
   color: #00BCD4;
 }
 
+.profiles-btm {
+  margin-bottom: 15px;
+  color: #484848;
+}
 
 #profiles-bottom-inner-left {
   text-align: right;
@@ -174,7 +187,7 @@ body {
 .profpic {
   width: 180px;
   height: 180px;
-  background-color: blue;
+  background-color: #00BCD4;
   float: left;
 }
 
