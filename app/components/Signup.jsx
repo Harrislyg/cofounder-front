@@ -50,14 +50,24 @@ class Signup extends React.Component {
     };
     xhr.send();
   }
+
+  // getSignedRequest(file){
+  //   $.get(`/sign-s3?file-name=${file.name}&file-type=${file.type}`)
+  //   .done(function (data) {
+  //     console.log('COCO: ', data)
+  //
+  //   })
+  // }
   /*
    Function called when file input updated. If there is a file selected, then
    start upload procedure by asking for a signed request from the app.
   */
   initUpload () {
     console.log('init')
-    const files = document.getElementById('file-input').files
+    const files = this.refs.fileInput.files
+    console.log('File', files)
     const file = files[0]
+    console.log(file)
     if(file == null) {
       return alert('No file selected.')
     }
@@ -82,7 +92,7 @@ class Signup extends React.Component {
 
 
           <label>Profile Picture</label>
-          <input onChange={this.initUpload.bind(this)} type="file" id="file-input"/>
+          <input onChange={this.initUpload.bind(this)} type="file" ref="fileInput"/>
           <p><br/></p>
           <img id="preview" src="/images/default.png"/>
           <p><br/></p>
