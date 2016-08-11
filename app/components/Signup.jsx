@@ -18,8 +18,8 @@ class Signup extends React.Component {
     xhr.onreadystatechange = () => {
       if(xhr.readyState === 4){
         if(xhr.status === 200){
-          document.getElementById('preview').src = url;
-          document.getElementById('avatar-url').value = url;
+          this.refs.preview.src = url;
+          this.refs.avatarUrl.value = url;
         }
         else{
           alert('Could not upload file.');
@@ -94,13 +94,13 @@ class Signup extends React.Component {
           <label>Profile Picture</label>
           <input onChange={this.initUpload.bind(this)} type="file" ref="fileInput"/>
           <p><br/></p>
-          <img id="preview" src="/images/default.png"/>
+          <img id="preview" ref="preview" src="/images/default.png"/>
           <p><br/></p>
 
 
 
         <form id="signUpForm" style={formStyle} onSubmit={this.onsignUp.bind(this)}>
-          <input type="hidden" id="avatar-url" name="avatar-url" value="/images/default.png"/>
+          <input type="hidden" ref="avatarUrl" name="avatar-url" value="/images/default.png"/>
 
         <legend>Sign Up</legend>
           <div className="mui-textfield">
