@@ -47,7 +47,7 @@ module.exports = {
 },
 
   getAllBiz (callBack) {
-    $.get(serverURL + 'users/expertise/hustler')
+    $.get(serverURL + 'users/expertise/Hustler')
       .done(function (data) {
         callBack(null, data)
         console.log(data)
@@ -56,7 +56,7 @@ module.exports = {
       })
   },
   getAllDev (callBack) {
-    $.get(serverURL + 'users/expertise/developer')
+    $.get(serverURL + 'users/expertise/Developer')
       .done(function (data) {
         callBack(null, data)
         console.log(data)
@@ -65,7 +65,7 @@ module.exports = {
       })
   },
   getAllEngineer (callBack) {
-    $.get(serverURL + 'users/expertise/engineer')
+    $.get(serverURL + 'users/expertise/Engineer')
       .done(function (data) {
         callBack(null, data)
         console.log(data)
@@ -74,7 +74,7 @@ module.exports = {
       })
   },
   getAllDesigner (callBack) {
-    $.get(serverURL + 'users/expertise/designer')
+    $.get(serverURL + 'users/expertise/Designer')
       .done(function (data) {
         callBack(null, data)
         console.log(data)

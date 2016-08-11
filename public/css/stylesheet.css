@@ -119,3 +119,49 @@ body {
   margin: 0;
   padding: 5px;
 }
+
+#profiles-picture {
+  width: 120px;
+  height: 120px;
+  display: inline-block;
+  float: left;
+  background-color: #000;
+}
+
+#profiles-right {
+  float: left;
+  margin-left: 15px;
+}
+
+#profiles-bottom-left {
+  width: 120px;
+  margin-top: 10px;
+  clear: both;
+  float: left;
+}
+
+
+#profiles-bottom-right {
+  width: 100px;
+  padding-left: 15px;
+  margin-top: 10px;
+  float: left;
+}
+
+#profiles-name {
+  font-size: 1.7em;
+  font-weight: 500;
+  color: #484848;
+}
+
+#profiles-expertise {
+  font-size: 1.4em;
+  font-weight: 500;
+  color: #00BCD4;
+}
+
+
+#profiles-bottom-inner-left {
+  text-align: right;
+  float: right;
+}

@@ -15,12 +15,27 @@ class Profiles extends React.Component {
     return (
       <div onClick={this.onUserProfile.bind(this)}>
         <div id="grid-gap" className="mui-col-md-4">
-          <div className="profile-grid mui-panel"><p>{this.props.profile.name}</p>
-          <p>{this.props.profile.expertise}</p>
-          <p>{this.props.profile.location}</p>
-          <p>{this.props.profile.partnerexpertise}</p>
-          <p>{this.props.profile.partnerworkexp}</p>
-          <p>{this.props.profile.partnerskills}</p>
+          <div className="profile-grid mui-panel">
+          <div id="profiles-picture"></div>
+          <div id="profiles-right">
+            <p id="profiles-name">{this.props.profile.name}</p>
+            <p id="profiles-expertise">{this.props.profile.expertise}</p>
+            <p id="profiles-location"><span className="glyphicon glyphicon-map-marker"></span>&nbsp;{this.props.profile.location}</p>
+          </div>
+          <div id="profiles-bottom-left">
+            <div id="profiles-bottom-inner-left">
+
+              <p id="float-right profiles-partnerexpertise">LOOKING FOR: </p>
+              <p id="profiles-partnerworkexp">EXPERIENCE: </p>
+              <p id="profiles-partnerskills">SKILLS: </p>
+            </div>
+          </div>
+          <div id="profiles-bottom-right">
+            <p id="profiles-partnerexpertise">{this.props.profile.partnerexpertise}</p>
+            <p id="profiles-partnerworkexp">{this.props.profile.partnerworkexp}</p>
+            <p id="profiles-partnerskills">{this.props.profile.partnerskills}</p>
+          </div>
+
           </div>
         </div>
 
