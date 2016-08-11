@@ -34,7 +34,7 @@ class Signup extends React.Component {
           <input type="password" name="password" required/>
           <label>Password</label>
         </div>
-        <button type="submit" className="mui-btn mui-btn--raised">Sign Up</button>
+        <button type="submit" className="mui-btn mui-btn--raised mui-btn--primary">Sign Up</button>
       </form>
       </div>
           </div>

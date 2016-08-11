@@ -28,7 +28,7 @@ class Login extends React.Component {
   <input type="password" name="password" required/>
   <label>Password</label>
 </div>
-<button type="submit" className="mui-btn mui-btn--raised">Login</button>
+<button type="submit" className="mui-btn mui-btn--raised mui-btn--primary">Login</button>
 </form>
 </div>
   </div>
