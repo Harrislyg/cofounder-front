@@ -15,6 +15,7 @@ class Login extends React.Component {
   render () {
     return (
       <div>
+        <p><br/></p>
 <div className="mui-container">
     <div className="mui-panel">
 <form id="logInForm" onSubmit={this.onLogIn.bind(this)}>

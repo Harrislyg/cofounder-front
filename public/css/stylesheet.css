@@ -43,13 +43,13 @@ body {
 
 .home-div {
   padding-top: 20px;
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
 
 }
 
 #home-one {
-  height: 200px;
+  height: 250px;
   width: 47%;
   margin-right: 10px;
   margin-bottom: 10px;
@@ -58,7 +58,7 @@ body {
   background-size:cover;
 }
 #home-two {
-  height: 200px;
+  height: 250px;
   width: 47%;
   margin-left: 10px;
   margin-bottom: 10px;
@@ -67,7 +67,7 @@ body {
   background-size:cover;
 }
 #home-three {
-  height: 200px;
+  height: 250px;
   width: 47%;
   margin-right: 10px;
   margin-top: 10px;
@@ -76,7 +76,7 @@ body {
   background-size:cover;
 }
 #home-four {
-  height: 200px;
+  height: 250px;
   width: 47%;
   margin-left: 10px;
   margin-top: 10px;
