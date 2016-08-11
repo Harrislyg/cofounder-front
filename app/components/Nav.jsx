@@ -68,10 +68,10 @@ class Nav extends React.Component {
     <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
       <ul className="nav navbar-nav navbar-right">
-        <li><Link className="navbar-font" to="/login">{this.state.login}</Link></li>
-        <li><Link className="navbar-font" to="/signup">{this.state.signup}</Link></li>
-        <li style={{display: this.state.display}}><Link className="navbar-font" to="/user">{window.localStorage.name}</Link></li>
-        <li onClick={this.onLogout.bind(this)} style={{display: this.state.display}}><Link className="navbar-font" to="#">Logout</Link></li>
+        <li><Link className="navbar-font nav-element" to="/login">{this.state.login}</Link></li>
+        <li><Link className="navbar-font nav-element" to="/signup">{this.state.signup}</Link></li>
+        <li style={{display: this.state.display}}><Link className="navbar-font nav-element" to="/user">{window.localStorage.name}</Link></li>
+        <li onClick={this.onLogout.bind(this)} style={{display: this.state.display}}><Link className="navbar-font nav-element" to="#">LOGOUT</Link></li>
       </ul>
     </div>
   </div>

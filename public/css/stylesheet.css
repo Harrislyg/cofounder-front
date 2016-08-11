@@ -23,6 +23,10 @@ body {
 
 }
 
+.nav-element {
+  margin-top: 10px !important;
+}
+
 #logo {
   font-size: 1.6em !important;
   font-weight: 600 !important;
@@ -121,7 +125,6 @@ body {
   background-size:cover;
   background-image: url('http://i.huffpost.com/gen/1645650/images/o-STARTUP-facebook.jpg');
   background-position-y: -25px;
-
 }
 
 #grid-gap {

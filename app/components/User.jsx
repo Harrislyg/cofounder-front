@@ -56,11 +56,11 @@ class userData extends React.Component {
         <div className="mui-panel">
           <div className="profpic"></div>
             <div className="floaton">
-            <div className="name" id="biggerfont">{this.state.name}</div>
-            <div className="expertise">{this.state.expertise}</div>
-            <div className="iconscontainer">
-                <span className="glyphicon glyphicon-map-marker"></span>
-            <div className="location"> {this.state.location}</div><br/>
+            <div  id="profiles-name">{this.state.name}</div>
+            <div id="profiles-expertise" className="profiles-btm">{this.state.expertise}</div>
+            <div className="iconscontainer profiles-btm">
+                <span id="profiles-btm" className="glyphicon glyphicon-map-marker"></span>
+            <div id="location" className="profiles-btm"> {this.state.location}</div><br/>
             </div>
           <div className="iconscontainer">
             <a href="www.facebook.com"><i className="fa fa-facebook-square fa-lg" aria-hidden="true"></i></a>
@@ -101,9 +101,7 @@ class userData extends React.Component {
             <div>
             <Link id="editUserLink" to="/Edituser"><button className="mui-btn mui-btn--raised mui-btn--primary">Edit</button></Link>
             </div>
-
-        </div>
-
+      </div>
     )
   }
 }
