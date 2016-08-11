@@ -14,12 +14,16 @@ class Profiles extends React.Component {
   render () {
     return (
       <div onClick={this.onUserProfile.bind(this)}>
-        <p>{this.props.profile.name}</p>
-        <p>{this.props.profile.expertise}</p>
-        <p>{this.props.profile.location}</p>
-        <p>{this.props.profile.partnerexpertise}</p>
-        <p>{this.props.profile.partnerworkexp}</p>
-        <p>{this.props.profile.partnerskills}</p>
+        <div id="grid-gap" className="mui-col-md-4">
+          <div className="profile-grid mui-panel"><p>{this.props.profile.name}</p>
+          <p>{this.props.profile.expertise}</p>
+          <p>{this.props.profile.location}</p>
+          <p>{this.props.profile.partnerexpertise}</p>
+          <p>{this.props.profile.partnerworkexp}</p>
+          <p>{this.props.profile.partnerskills}</p>
+          </div>
+        </div>
+
       </div>
 
     )

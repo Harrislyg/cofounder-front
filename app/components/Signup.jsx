@@ -12,12 +12,15 @@ class Signup extends React.Component {
     cofoundersApi.signUp(signUpData)
   }
   render () {
+    var formStyle = {
+      texTransform: 'lower'
+    }
     return (
       <div>
         <p><br/></p>
         <div className="mui-container">
             <div className="mui-panel">
-        <form id="signUpForm" onSubmit={this.onsignUp.bind(this)}>
+        <form id="signUpForm" style={formStyle} onSubmit={this.onsignUp.bind(this)}>
         <legend>Sign Up</legend>
           <div className="mui-textfield">
             <input id="name" type="text" name="name" required/>

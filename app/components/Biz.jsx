@@ -30,10 +30,9 @@ class Biz extends React.Component {
 
     console.log('Hello', this.state.profiles)
     return (
-      <div>
-        <div>
+      <div className="mui-container-fluid">
+        <div className="mui-row">
           {this.state.profiles.map((profile, i) => (<Profiles profile={profile} index={i} key={i}/>))}
-
         </div>
       </div>
 

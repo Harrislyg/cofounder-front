@@ -114,3 +114,8 @@ body {
   background-position-y: -25px;
 
 }
+
+#grid-gap {
+  margin: 0;
+  padding: 5px;
+}

@@ -53,17 +53,22 @@ class userData extends React.Component {
   render () {
     return (
       <div>
-        <p>{this.state.name}</p>
+        <div className="mui-panel">
+        <p><strong>{this.state.name}</strong></p>
         <p>{this.state.email}</p>
-        <p>{this.state.expertise}</p>
-        <p>{this.state.workexp}</p>
-        <p>{this.state.skills}</p>
-        <p>{this.state.education}</p>
-        <p>{this.state.age}</p>
         <p>{this.state.location}</p>
-        <p>{this.state.partnerexpertise}</p>
-        <p>{this.state.partnerworkexp}</p>
-        <p>{this.state.partnerskills}</p>
+        <hr/>
+        <strong><p>BACKGROUND</p></strong>
+        <p>Expertise: {this.state.expertise}</p>
+        <p>Work Experience: {this.state.workexp}</p>
+        <p>Skills: {this.state.skills}</p>
+        <p>Education: {this.state.education}</p>
+        <hr/>
+        <strong><p>{this.state.name} IS LOOKING FOR A FOUNDER WHO</p></strong>
+        <p>Expertise: {this.state.partnerexpertise}</p>
+        <p>Work Industry: {this.state.partnerworkexp}</p>
+        <p>Skills: {this.state.partnerskills}</p>
+        </div>
         <Link to="/Edituser">Edit</Link>
       </div>
 

@@ -12,6 +12,9 @@ class Edituser extends React.Component {
     cofoundersApi.editMyStats(editData)
   }
   render () {
+    var formStyle = {
+      texTransform: 'lower'
+    }
     return (
       <div>
         <p><br/></p>
