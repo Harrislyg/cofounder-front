@@ -52,25 +52,57 @@ class userData extends React.Component {
 
   render () {
     return (
-      <div>
+      <div className="grid-gap2">
         <div className="mui-panel">
-        <p><strong>{this.state.name}</strong></p>
-        <p>{this.state.email}</p>
-        <p>{this.state.location}</p>
-        <hr/>
-        <strong><p>BACKGROUND</p></strong>
-        <p>Expertise: {this.state.expertise}</p>
-        <p>Work Experience: {this.state.workexp}</p>
-        <p>Skills: {this.state.skills}</p>
-        <p>Education: {this.state.education}</p>
-        <hr/>
-        <strong><p>{this.state.name} IS LOOKING FOR A FOUNDER WHO</p></strong>
-        <p>Expertise: {this.state.partnerexpertise}</p>
-        <p>Work Industry: {this.state.partnerworkexp}</p>
-        <p>Skills: {this.state.partnerskills}</p>
+          <div className="profpic"></div>
+            <div className="floaton">
+            <div className="name" id="biggerfont">{this.state.name}</div>
+            <div className="expertise">{this.state.expertise}</div>
+            <div className="iconscontainer">
+                <span className="glyphicon glyphicon-map-marker"></span>
+            <div className="location"> {this.state.location}</div><br/>
+            </div>
+          <div className="iconscontainer">
+            <a href="www.facebook.com"><i className="fa fa-facebook-square fa-lg" aria-hidden="true"></i></a>
+            <a href="www.twitter.com"><i className="fa fa-twitter-square fa-lg" aria-hidden="true"></i></a>
+            <a href="www.linkedin.com"><i className="fa fa-linkedin-square fa-lg" aria-hidden="true"></i></a>
+          </div>
+          </div>
         </div>
-        <Link to="/Edituser">Edit</Link>
-      </div>
+
+        <div className="mui-panel" id="muipanel">
+          <div>
+            <div className="smallpanel">
+            <p id="marginlefttop" className="whitefont">BACKGROUND</p>
+            </div>
+        </div><br/>
+            <p id="marginleft" className="strong">Work Experience</p>
+            <p id="marginleft">{this.state.workexp}</p><br/>
+            <p id="marginleft" className="strong">Skills</p>
+            <p id="marginleft">{this.state.skills}</p><br/>
+            <p id="marginleft" className="strong">Education</p>
+            <p id="marginleft">{this.state.education}</p><br/>
+            </div>
+
+            <div className="mui-panel" id="muipanel">
+              <div>
+                <div className="smallpanel">
+                <p id="marginlefttop" className="whitefont">{this.state.name.toUpperCase()} IS LOOKING FOR A FOUNDER WHO</p>
+                </div><br/>
+              <p id="marginleft" className="strong">Has Expertise In</p>
+                <p id="marginleft">{this.state.partnerexpertise}</p><br/>
+                <p id="marginleft" className="strong">Work Industry</p>
+                <p id="marginleft">{this.state.partnerworkexp}</p><br/>
+                <p id="marginleft" className="strong">Skills</p>
+                <p id="marginleft">{this.state.partnerskills}</p>
+                </div>
+                <br/>
+            </div>
+            <div>
+            <button className="mui-btn mui-btn--raised mui-btn--primary"><Link id="editUserLink" to="/Edituser">Edit</Link></button>
+            </div>
+
+        </div>
 
     )
   }

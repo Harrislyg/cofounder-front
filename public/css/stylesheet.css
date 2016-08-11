@@ -165,3 +165,82 @@ body {
   text-align: right;
   float: right;
 }
+
+.grid-gap2 {
+  margin: 0;
+  padding: 50px;
+}
+
+.profpic {
+  width: 180px;
+  height: 180px;
+  background-color: blue;
+  float: left;
+}
+
+.floaton {
+  float: left;
+  margin-left: 40px;
+}
+
+.iconscontainer {
+  width: 200px;
+  height: 20px;
+  display: flex;
+}
+
+.iconscontainer > a {
+  color: #00BCD4;
+  text-decoration: none;
+  padding: 1px;
+}
+
+#biggerfont {
+  font-size: 20px;
+}
+
+.smallpanel {
+  width: 100%;
+  height: 25%;
+  background-color: #00BCD4;
+  font-size: 15px;
+}
+
+#muipanel {
+  padding: 0;
+}
+
+#marginleft {
+  margin-left: 15px;
+}
+
+.strong {
+  font-weight: bold;
+}
+
+.whitefont {
+  color: white;
+}
+
+#marginlefttop {
+  margin-left: 15px;
+  padding-top: 10px;
+}
+
+#editUserLink {
+  color: #fff;
+  text-decoration: none;
+
+}
+
+#editUserLink:hover {
+  color: #fff;
+  text-decoration: none;
+
+}
+
+#preview {
+  border: 1px solid gray;
+  width: 180px;
+  height: 180px;
+}
