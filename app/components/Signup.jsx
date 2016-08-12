@@ -35,9 +35,8 @@ class Signup extends React.Component {
   */
   getSignedRequest(file){
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', `/sign-s3?file-name=${file.name}&file-type=${file.type}`);
+    xhr.open('GET', `http://localhost:3000/sign-s3?file-name=${file.name}&file-type=${file.type}`);
     xhr.onreadystatechange = () => {
-      console.log('One: ', xhr.responseText)
       if(xhr.readyState === 4){
         if(xhr.status === 200){
           console.log('Two: ', xhr.responseText)
@@ -101,6 +100,7 @@ class Signup extends React.Component {
 
 
         <form id="signUpForm" style={formStyle} onSubmit={this.onsignUp.bind(this)}>
+
           <input type="hidden" ref="avatarUrl" name="avatar-url" value="/images/default.png"/>
 
         <legend>Sign Up</legend>
