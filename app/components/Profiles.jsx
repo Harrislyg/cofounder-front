@@ -13,7 +13,7 @@ class Profiles extends React.Component {
 
   render () {
     return (
-      <div onClick={this.onUserProfile.bind(this)}>
+      <div id="hoverCursor" onClick={this.onUserProfile.bind(this)}>
         <div id="grid-gap" className="mui-col-md-4">
           <div className="profile-grid mui-panel">
           <div id="profiles-picture"></div>

@@ -260,3 +260,8 @@ body {
   width: 180px;
   height: 180px;
 }
+
+#hoverCursor {
+  cursor: pointer;
+  cursor: hand;
+}
