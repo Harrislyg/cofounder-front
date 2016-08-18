@@ -137,7 +137,7 @@ body {
   height: 120px;
   display: inline-block;
   float: left;
-  background-color: #000;
+  background-color: #fff;
 }
 
 #profiles-right {
@@ -190,7 +190,7 @@ body {
 .profpic {
   width: 180px;
   height: 180px;
-  background-color: #00BCD4;
+  background-color: #fff;
   float: left;
 }
 

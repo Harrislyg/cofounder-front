@@ -16,7 +16,7 @@ class Profiles extends React.Component {
       <div id="hoverCursor" onClick={this.onUserProfile.bind(this)}>
         <div id="grid-gap" className="mui-col-md-4">
           <div className="profile-grid mui-panel">
-          <div id="profiles-picture"></div>
+          <div id="profiles-picture"><img class="img-responsive" src={this.props.profile.profileImg} height="120" width="120"/></div>
           <div id="profiles-right">
             <p id="profiles-name">{this.props.profile.name}</p>
             <p id="profiles-expertise">{this.props.profile.expertise}</p>

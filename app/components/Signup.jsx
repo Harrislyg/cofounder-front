@@ -1,6 +1,7 @@
 var React = require('react')
 var cofoundersApi = require('cofoundersApi')
 var serialize = require('form-serialize')
+var imgUrl
 
 class Signup extends React.Component {
 
@@ -12,21 +13,21 @@ class Signup extends React.Component {
     cofoundersApi.signUp(signUpData)
   }
 
-  uploadFile(file, signedRequest, url){
-    const xhr = new XMLHttpRequest();
-    xhr.open('PUT', signedRequest);
+  uploadFile (file, signedRequest, url) {
+    const xhr = new XMLHttpRequest ()
+    xhr.open('PUT', signedRequest)
     xhr.onreadystatechange = () => {
-      if(xhr.readyState === 4){
-        if(xhr.status === 200){
-          this.refs.preview.src = url;
-          this.refs.avatarUrl.value = url;
+      if(xhr.readyState === 4) {
+        if(xhr.status === 200) {
+          this.refs.preview.src = url
+          this.refs.avatarUrl.value = url
         }
         else{
-          alert('Could not upload file.');
+          alert('Could not upload file.')
         }
       }
-    };
-    xhr.send(file);
+    }
+    xhr.send(file)
   }
   /*
     Function to get the temporary signed request from the app.
@@ -34,17 +35,16 @@ class Signup extends React.Component {
     request.
   */
   getSignedRequest(file){
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', `http://localhost:3000/sign-s3?file-name=${file.name}&file-type=${file.type}`);
+    const xhr = new XMLHttpRequest()
+    xhr.open('GET', `http://localhost:3000/sign-s3?file-name=${file.name}&file-type=${file.type}`)
     xhr.onreadystatechange = () => {
-      if(xhr.readyState === 4){
-        if(xhr.status === 200){
-          console.log('Two: ', xhr.responseText)
-          const response = JSON.parse(xhr.responseText);
-          this.uploadFile(file, response.signedRequest, response.url);
-        }
-        else{
-          alert('Could not get signed URL.');
+      if(xhr.readyState === 4) {
+        if(xhr.status === 200) {
+          console.log('IMG URL: ', xhr.responseText)
+          const response = JSON.parse(xhr.responseText)
+          this.uploadFile(file, response.signedRequest, response.url)
+        } else {
+          alert('Could not get signed URL.')
         }
       }
     };
@@ -86,10 +86,12 @@ class Signup extends React.Component {
 
     return (
       <div>
+
         <p><br/></p>
         <div className="mui-container">
             <div className="mui-panel">
 
+              <legend>Sign Up</legend>
 
           <label>Profile Picture</label>
           <input onChange={this.initUpload.bind(this)} type="file" ref="fileInput"/>
@@ -101,9 +103,8 @@ class Signup extends React.Component {
 
         <form id="signUpForm" style={formStyle} onSubmit={this.onsignUp.bind(this)}>
 
-          <input type="hidden" ref="avatarUrl" name="avatar-url" value="/images/default.png"/>
+          <input type="hidden" ref="avatarUrl" name="profileImg" value="/images/default.png"/>
 
-        <legend>Sign Up</legend>
           <div className="mui-textfield">
             <input id="name" type="text" name="name" required/>
             <label>Name</label>

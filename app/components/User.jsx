@@ -31,6 +31,7 @@ class userData extends React.Component {
       console.log('callback', data)
       this.setState({
         name: data.userData.name,
+        profileImg: data.userData.profileImg,
         email: data.userData.email,
         expertise: data.userData.expertise,
         workexp: data.userData.workexp,
@@ -54,7 +55,7 @@ class userData extends React.Component {
     return (
       <div className="grid-gap2">
         <div className="mui-panel">
-          <div className="profpic"></div>
+          <div className="profpic"><img class="img-responsive" src={this.state.profileImg} height="180" width="180"/></div>
             <div className="floaton">
             <div  id="profiles-name">{this.state.name}</div>
             <div id="profiles-expertise" className="profiles-btm">{this.state.expertise}</div>
