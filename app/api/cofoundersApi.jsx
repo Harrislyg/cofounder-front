@@ -13,6 +13,7 @@ module.exports = {
         window.localStorage.name = response.name
         window.localStorage.email = $('#user-email').val()
         window.localStorage.auth_token = response.auth_token
+        window.localStorage.profileImg = response.profileImg
         // then redirect
         browserHistory.push('/')
       },

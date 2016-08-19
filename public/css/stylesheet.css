@@ -265,3 +265,7 @@ body {
   cursor: pointer;
   cursor: hand;
 }
+
+#nav-profile {
+  padding-right: 0px;
+}
