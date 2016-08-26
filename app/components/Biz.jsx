@@ -1,5 +1,8 @@
 var React = require('react')
 var Profiles = require('Profiles')
+var Banner = require('Banner')
+var Rolenav = require('Rolenav')
+
 var cofoundersApi = require('cofoundersApi')
 
 class Biz extends React.Component {
@@ -30,8 +33,10 @@ class Biz extends React.Component {
 
     console.log('Hello', this.state.profiles)
     return (
-      <div className="mui-container-fluid">
-        <div className="mui-row">
+      <div>
+        <Banner />
+        <Rolenav />
+        <div>
           {this.state.profiles.map((profile, i) => (<Profiles profile={profile} index={i} key={i}/>))}
         </div>
       </div>

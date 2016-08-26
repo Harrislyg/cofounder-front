@@ -27,11 +27,12 @@ module.exports = {
       About: 'app/components/About.jsx',
       Signup: 'app/components/Signup.jsx',
       Nav: 'app/components/Nav.jsx',
+      Rolenav: 'app/components/Rolenav.jsx',
+      Banner: 'app/components/Banner.jsx',
       Biz: 'app/components/Biz.jsx',
       Dev: 'app/components/Dev.jsx',
       Engineer: 'app/components/Engineer.jsx',
       Designer: 'app/components/Designer.jsx',
-
       Profiles: 'app/components/Profiles.jsx',
       Profile: 'app/components/Profile.jsx',
       User: 'app/components/User.jsx',

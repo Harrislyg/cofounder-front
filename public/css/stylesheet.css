@@ -269,3 +269,72 @@ body {
 #nav-profile {
   padding-right: 0px;
 }
+
+.banner {
+  width: 100%;
+  height: 500px;
+  background-image: url('http://www.incimages.com/uploaded_files/image/1940x900/teamwork_37918.jpg');
+  background-repeat:no-repeat;
+  background-size:cover;
+  zoom: 50%;
+}
+
+.flexContainer {
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.flexContainer div {
+  position:relative;
+  flex-grow: 1;
+  height: 40px;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: center;
+  color: #464646 !important;
+  font-weight: 600 !important;
+  font-size: 1.1em !important;
+  padding-top: 10px;
+
+}
+
+.btmNavOneStyle:after {
+  position:relative;
+  flex-grow: 1;
+  height: 40px;
+  margin-left: 150px;
+  margin-right: 150px;
+  text-align: center;
+  color: #464646 !important;
+  font-weight: 600 !important;
+  font-size: 1.1em !important;
+  padding-top: 10px;
+  content:'';
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-bottom: solid 20px #00BCD4;
+    border-left: solid 20px transparent;
+    border-right: solid 20px transparent;
+}
+
+.btmNavOneStyle {
+  margin-top: 5px;
+  background-color: #00BCD4;
+}
+
+.btmNavRemainderStyle {
+  margin-top: 5px;
+  background-color: #fff;
+}
+
+.flexContainer span:hover {
+  color: #fff !important;
+}

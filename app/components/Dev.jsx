@@ -1,5 +1,8 @@
 var React = require('react')
 var Profiles = require('Profiles')
+var Banner = require('Banner')
+var Rolenav = require('Rolenav')
+
 var cofoundersApi = require('cofoundersApi')
 
 class Dev extends React.Component {
@@ -31,6 +34,8 @@ class Dev extends React.Component {
     console.log('Hello', this.state.profiles)
     return (
       <div>
+        <Banner />
+        <Rolenav />
         <div>
           {this.state.profiles.map((profile, i) => (<Profiles profile={profile} index={i} key={i}/>))}
 

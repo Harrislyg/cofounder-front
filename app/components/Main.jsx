@@ -38,7 +38,6 @@ function authCheck (nextState, replace) {
 
 class Main extends React.Component {
 
-
   render () {
     return (
       <MuiThemeProvider muiTheme={lightMuiTheme}>
