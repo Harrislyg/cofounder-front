@@ -30,12 +30,15 @@ class Biz extends React.Component {
   }
 
   render () {
-
-    console.log('Hello', this.state.profiles)
+    // console.log('Hey', this.state.profiles)
+    // var person = this.state.profiles
+    // console.log('Person', person[0])
+    // var person = this.state.profiles
+    // console.log('Person', person)
     return (
       <div>
         <Banner />
-        <Rolenav />
+        <Rolenav person={this.state.profiles} />
         <div>
           {this.state.profiles.map((profile, i) => (<Profiles profile={profile} index={i} key={i}/>))}
         </div>

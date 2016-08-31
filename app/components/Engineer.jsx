@@ -34,7 +34,7 @@ class Engineer extends React.Component {
     return (
       <div>
         <Banner />
-        <Rolenav />
+        <Rolenav person={this.state.profiles}/>
         <div>
           {this.state.profiles.map((profile, i) => (<Profiles profile={profile} index={i} key={i}/>))}
 

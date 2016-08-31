@@ -287,6 +287,12 @@ body {
   justify-content: flex-start;
 }
 
+.btmNavRemainderStyle {
+  color: #fff !important;
+  margin-top: 5px;
+  background-color: #00BCD4;
+}
+
 .flexContainer div {
   position:relative;
   flex-grow: 1;
@@ -294,12 +300,13 @@ body {
   margin-left: 5px;
   margin-right: 5px;
   text-align: center;
-  color: #464646 !important;
   font-weight: 600 !important;
   font-size: 1.1em !important;
   padding-top: 10px;
 
 }
+
+
 
 .btmNavOneStyle:after {
   position:relative;
@@ -308,7 +315,6 @@ body {
   margin-left: 150px;
   margin-right: 150px;
   text-align: center;
-  color: #464646 !important;
   font-weight: 600 !important;
   font-size: 1.1em !important;
   padding-top: 10px;
@@ -320,21 +326,13 @@ body {
     margin: 0 auto;
     width: 0;
     height: 0;
-    border-bottom: solid 20px #00BCD4;
-    border-left: solid 20px transparent;
-    border-right: solid 20px transparent;
+    border-bottom: solid 30px #00BCD4;
+    border-left: solid 30px transparent;
+    border-right: solid 30px transparent;
 }
 
 .btmNavOneStyle {
+  color: #fff;
   margin-top: 5px;
   background-color: #00BCD4;
-}
-
-.btmNavRemainderStyle {
-  margin-top: 5px;
-  background-color: #fff;
-}
-
-.flexContainer span:hover {
-  color: #fff !important;
 }
