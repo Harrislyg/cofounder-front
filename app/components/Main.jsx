@@ -66,10 +66,10 @@ var routes = (
       <Route path="login" component={Login}/>
       <Route path="about" component={About} onEnter={authCheck}/>
       <Route path="signup" component={Signup}/>
-      <Route path="biz" component={Biz}/>
-      <Route path="dev" component={Dev}/>
-      <Route path="engineer" component={Engineer}/>
-      <Route path="designer" component={Designer}/>
+      <Route path="Hustler" component={Biz}/>
+      <Route path="Developer" component={Dev}/>
+      <Route path="Engineer" component={Engineer}/>
+      <Route path="Designer" component={Designer}/>
       <Route path="profile" component={Profile}/>
       <Route path="user" component={User} onEnter={authCheck}/>
       <Route path="Edituser" component={Edituser} onEnter={authCheck}/>

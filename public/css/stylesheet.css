@@ -288,9 +288,38 @@ body {
 }
 
 .btmNavRemainderStyle {
-  color: #fff !important;
+  color: #00BCD4 !important;
+  text-decoration: none;
   margin-top: 5px;
-  background-color: #00BCD4;
+  background-color: #fff;
+}
+
+.btmNavRemainderStyle:visited {
+  text-decoration: none;
+  color: #00BCD4 !important;
+  margin-top: 5px;
+  background-color: #fff;
+}
+
+.btmNavRemainderStyle:link {
+  text-decoration: none;
+  color: #00BCD4 !important;
+  margin-top: 5px;
+  background-color: #fff;
+}
+
+.btmNavRemainderStyle:hover {
+  text-decoration: none;
+  color: #00BCD4 !important;
+  margin-top: 5px;
+  background-color: #fff;
+}
+
+.btmNavRemainderStyle:active {
+  text-decoration: none;
+  color: #00BCD4 !important;
+  margin-top: 5px;
+  background-color: #fff;
 }
 
 .flexContainer div {
@@ -307,7 +336,7 @@ body {
 }
 
 
-
+/* To design the triangle */
 .btmNavOneStyle:after {
   position:relative;
   flex-grow: 1;
@@ -332,6 +361,35 @@ body {
 }
 
 .btmNavOneStyle {
+  text-decoration: none;
+  color: #fff;
+  margin-top: 5px;
+  background-color: #00BCD4;
+}
+
+.btmNavOneStyle:link {
+  text-decoration: none;
+  color: #fff;
+  margin-top: 5px;
+  background-color: #00BCD4;
+}
+
+.btmNavOneStyle:visited {
+  text-decoration: none;
+  color: #fff;
+  margin-top: 5px;
+  background-color: #00BCD4;
+}
+
+.btmNavOneStyle:hover {
+  text-decoration: none;
+  color: #fff;
+  margin-top: 5px;
+  background-color: #00BCD4;
+}
+
+.btmNavOneStyle:active {
+  text-decoration: none;
   color: #fff;
   margin-top: 5px;
   background-color: #00BCD4;

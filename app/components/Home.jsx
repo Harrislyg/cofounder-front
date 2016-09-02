@@ -13,12 +13,12 @@ class Home extends React.Component {
         </div>
         <div className="home-div mui-container-fluid">
             <div className="mui-row">
-              <Link className="home-links" to="/biz"  activeStyle={{fontWeight: 'bold'}}><div id="home-one" className="mui-col-md-6 mui-link mui-panel">Hustlers</div></Link>
-              <Link className="home-links" to="/dev"  activeStyle={{fontWeight: 'bold'}}><div id="home-two" className="mui-col-md-6 mui-link mui-panel">Developers</div></Link>
+              <Link className="home-links" to="/Hustler"  activeStyle={{fontWeight: 'bold'}}><div id="home-one" className="mui-col-md-6 mui-link mui-panel">Hustlers</div></Link>
+              <Link className="home-links" to="/Developer"  activeStyle={{fontWeight: 'bold'}}><div id="home-two" className="mui-col-md-6 mui-link mui-panel">Developers</div></Link>
             </div>
             <div className="mui-row">
-              <Link className="home-links" to="/engineer"  activeStyle={{fontWeight: 'bold'}}><div id="home-three" className="mui-col-md-6 mui-link mui-panel">Engineers</div></Link>
-              <Link className="home-links" to="/designer"  activeStyle={{fontWeight: 'bold'}}><div id="home-four" className="mui-col-md-6 mui-link mui-panel">Designers</div></Link>
+              <Link className="home-links" to="/Engineer"  activeStyle={{fontWeight: 'bold'}}><div id="home-three" className="mui-col-md-6 mui-link mui-panel">Engineers</div></Link>
+              <Link className="home-links" to="/Designer"  activeStyle={{fontWeight: 'bold'}}><div id="home-four" className="mui-col-md-6 mui-link mui-panel">Designers</div></Link>
             </div>
         </div>
       </div>

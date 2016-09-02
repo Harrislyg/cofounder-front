@@ -1,4 +1,6 @@
 var React = require('react')
+var {Link, IndexLink} = require('react-router')
+
 class Rolenav extends React.Component {
   constructor (props) {
     super(props)
@@ -40,10 +42,10 @@ class Rolenav extends React.Component {
 
     return (
       <div className="flexContainer">
-        <div id="btmNavOne" className="btmNavOneStyle"><span>{personNav.expertise}</span></div>
-        <div id="btmNavTwo" className="btmNavRemainderStyle"><span>{navRoles.navOne}</span></div>
-        <div id="btmNavThree" className="btmNavRemainderStyle"><span>{navRoles.navTwo}</span></div>
-        <div id="btmNavFour" className="btmNavRemainderStyle"><span>{navRoles.navThree}</span></div>
+        <div id="btmNavOne" className="btmNavOneStyle" ><span><Link className="btmNavOneStyle" to={"/" + personNav.expertise} >{personNav.expertise}</Link></span></div>
+        <div id="btmNavTwo" className="btmNavRemainderStyle"><Link className="btmNavRemainderStyle" to={"/" + navRoles.navOne}><span>{navRoles.navOne}</span></Link></div>
+        <div id="btmNavThree" className="btmNavRemainderStyle"><Link className="btmNavRemainderStyle" to={"/" + navRoles.navTwo}><span>{navRoles.navTwo}</span></Link></div>
+        <div id="btmNavFour" className="btmNavRemainderStyle"><Link className="btmNavRemainderStyle" to={"/" + navRoles.navThree}><span>{navRoles.navThree}</span></Link></div>
 
       </div>
     )
