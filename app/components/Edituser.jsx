@@ -18,9 +18,7 @@ class Edituser extends React.Component {
         return (
             <div>
                 <p><br/></p>
-                  <p><br/></p>
-
-
+                <p><br/></p>
                 <div className="mui-container">
                     <div className="mui-panel">
                         <form id="editForm" onSubmit={this.onsignUp.bind(this)}>
