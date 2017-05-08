@@ -1,5 +1,7 @@
 /* global $ */
-var serverURL = 'https://teamo-backend.herokuapp.com/'
+var serverURL = 'https://teamo-backend.herokuapp.com/';
+
+//var serverURL = 'http://localhost:3000/'
 
 $(function () {
   // listen for the form login
